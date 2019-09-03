@@ -1,11 +1,16 @@
+var userChoice, compChoice;
+var choices = [
+  'rock',
+  'paper',
+  'scissors'
+];
 var rock = document.getElementById('rock');
-
-var userChoice;
-var compChoice;
+var paper = document.getElementById('paper');
+var scissors = document.getElementById('paper');
 
 rock.addEventListener('click', function(){
   userChoice = this.id;
-  // get compChoice
-  // display those choices to the browser
-  // decides who wins
+  compChoice = choices[(Math.random()*3).floor];
+
 });
+

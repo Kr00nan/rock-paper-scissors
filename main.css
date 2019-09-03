@@ -1,9 +1,23 @@
-.choices {
+body {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item img {
   height: 150px;
   width: 150px;
   border: 1px solid black;
+  border-radius: 50%;
 }
 
-.choices:hover {
+.item:hover {
   cursor: pointer;
+}
+
+#computer {
+  height: 500px;
+  background-color: cadetblue;
 }
