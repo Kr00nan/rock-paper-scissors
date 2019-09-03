@@ -1,20 +1,51 @@
 body {
   text-align: center;
 }
-.container {
+
+#wheel {
+  width: 250px;
+}
+
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
   display: flex;
   justify-content: space-evenly;
 }
 
 .item img {
+  padding: 3px;
   height: 150px;
   width: 150px;
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 50%;
 }
 
 .item:hover {
   cursor: pointer;
+}
+
+.selected {
+  border: 1px solid cadetblue;
+  box-shadow: 3px 3px 20px cadetblue;
+  border-radius: 50%;
 }
 
 #computer {
