@@ -44,6 +44,8 @@ scissors.addEventListener('click', function () {
 
 var determineWinner = function (userChoice) {
   compChoice = choices[Math.floor(Math.random() * 3)];
+  // logic to determine winner, change the text of the announcement,
+  // and increment the win/lose/draw totals
   if(userChoice === compChoice) {
     annnouncement.innerHTML = `It's a draw! You both picked ${userChoice}!`;
     draws.innerHTML = ++d;
@@ -67,6 +69,8 @@ var determineWinner = function (userChoice) {
   }
 }
 
+// reset button: resets the win/lose/draw stats and
+// removes the classes from the announcement element.
 var btn = document.getElementById('reset');
 btn.addEventListener('click', function() {
   w = 0;
@@ -83,6 +87,8 @@ btn.addEventListener('click', function() {
   annnouncement.classList.remove('green','red')
 })
 
+// calculates the percentages of win/lose/draw
+// still need to figure out formatting into percentages...
 var doTheMath = function() {
   wp.innerHTML = `Win Percentage: ${w/(w+l+d)}`;
   lp.innerHTML = `Loss Percentage: ${l/(w+l+d)}`;
