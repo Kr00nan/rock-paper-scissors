@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,25 @@
   <title>JS :: Rock, Paper, Scissors</title>
   <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-  <h3>Wins: </h3>
-  <h3>Loses: </h3>
-  <h3>Draws: </h3>
-  <hr>
-  <div id="computer">
-    <img src="img/choice_wheel.png" alt="choice wheel" id="wheel">
-    <br>
-    <br>
-    <h3 id="announcement"></h3>
+  <div>
+    <a id = 'wp'>Win Percentage: 0</a>
+    <a id = 'lp'>Loss Percentage: 0</a>
+    <a id = 'tp'>Tie Percentage: 0</a>
+    <a id = 'tg'>Total Games: 0</a>
   </div>
-    <!--Here is where the computer's choice goes-->
+  <div id="computer">
+    Wins: <a id="wins"></a>
+    Losses: <a id="losses"></a>
+    Draws: <a id="draws"></a>
+    <hr>
+    <img src="img/choice_wheel.png" alt="choice wheel" id="wheel">
+    <h3 id="announcement">The winner is...</h3>
+  </div>
   <hr>
   <h1>choose your weapon:</h1>
-  <div class="container2">
+  <div class="container">
     <div class="item" id="rock">
       <img src="img/rock_choice.png" alt="choosing rock">
     </div>
@@ -32,6 +37,8 @@
       <img src="img/scissors_choice.png" alt="choosing scissors">
     </div>
   </div>
+  <button id='reset'>Reset Game</button>
   <script src="main.js"></script>
 </body>
+
 </html>

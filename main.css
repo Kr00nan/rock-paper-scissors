@@ -1,30 +1,8 @@
-body {
+h1, h3 {
+  text-align: center;
 }
 
-#wheel {
-  width: 250px;
-}
-
-.rotate {
-  animation: rotation 2s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.container1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container2 {
+.container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -47,7 +25,27 @@ body {
   border-radius: 50%;
 }
 
+#wheel {
+  width: 250px;
+  margin-top: 50px;
+}
+
 #computer {
-  height: 500px;
+  padding-top: 15px;
+  height: 400px;
   background-color: cadetblue;
+  text-align: center;
+}
+
+#reset {
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: firebrick;
 }
