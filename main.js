@@ -90,9 +90,8 @@ btn.addEventListener('click', function() {
 // calculates the percentages of win/lose/draw
 // still need to figure out formatting into percentages...
 var doTheMath = function() {
-  wp.innerHTML = `Win Percentage: ${w/(w+l+d)}`;
-  lp.innerHTML = `Loss Percentage: ${l/(w+l+d)}`;
-  tp.innerHTML = `Tie Percentage: ${d/(w+l+d)}`;
+  wp.innerHTML = `Win Percentage: ${parseFloat(w/(w+l+d)).toFixed(2)}%`;
+  lp.innerHTML = `Loss Percentage: ${parseFloat(l/(w+l+d)).toFixed(2)}%`;
+  tp.innerHTML = `Tie Percentage: ${parseFloat(d/(w+l+d)).toFixed(2)}%`;
   tg.innerHTML = `Total Games: ${w + l + d}`;
 }
-
