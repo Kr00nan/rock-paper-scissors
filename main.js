@@ -19,28 +19,16 @@ losses.innerHTML = l;
 var draws = document.getElementById('draws');
 draws.innerHTML = d;
 
-var rock = document.getElementById('rock');
-var paper = document.getElementById('paper');
-var scissors = document.getElementById('scissors');
+var items = document.getElementsByClassName('item');
 var annnouncement = document.getElementById('announcement');
 
-rock.addEventListener('click', function () {
-  userChoice = this.id;
-  determineWinner(userChoice);
-  doTheMath();
-});
-
-paper.addEventListener('click', function () {
-  userChoice = this.id;
-  determineWinner(userChoice);
-  doTheMath();
-})
-
-scissors.addEventListener('click', function () {
-  userChoice = this.id;
-  determineWinner(userChoice);
-  doTheMath();
-})
+for (var i = 0; i < items.length; i++){
+  items[i].addEventListener('click', function() {
+    userChoice = this.id;
+    determineWinner(userChoice);
+    doTheMath();
+  })
+}
 
 var determineWinner = function (userChoice) {
   compChoice = choices[Math.floor(Math.random() * 3)];
